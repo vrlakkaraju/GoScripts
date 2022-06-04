@@ -1,4 +1,5 @@
 # My Golang notes 
+**NOTE:** This work is reference from https://github.com/inancgumus/learngo 
 
 * To intialize a module 
   * `go mod mymodule`
@@ -13,7 +14,7 @@
   * `go build -o myscript`
 
 
-# Variables
+## Variables
 
 * Declaration and Initialization
   * `var speed int`
@@ -43,7 +44,7 @@
 
 
 
-# Raw string literal
+## Raw string literal
 <img src="https://user-images.githubusercontent.com/67871237/172013672-aff584a8-38a5-412a-9086-aa9979e82363.png" width="300" height="200">
 
   * **String literal:** Interpreted(means if there is any escape secquences ex:`\` or `\n`, GO will interpret them)
@@ -55,6 +56,80 @@
     <html>
      <body>"Hello"</body>
     </html>`
+
+## enum and iota
+* **enum** groups related constants in one type. Below `Weekday` is a custom type of int
+* **iota** is a numeric universal counter starting at 0. Used ONLY with constant declarations
+<img src="https://user-images.githubusercontent.com/67871237/172019199-47831784-fad7-43c2-b74c-d2a621f69f86.png" width="400" height="300">
+
+## Printf
+* `fmt.Printf` prints formatted output, some examples below
+  * `%q` prints string with quotes ex: `"Ramana"`
+  * `%s` prints string without quotes ex: `Ramana`
+  * `%T` prints type of the var ex: 'int'
+  * `%d` prints int values ex: `10`
+  * `%.2f` prints float64 values with 2 precision points ex: `54.50`
+  * `%t` prints bool values ex: `true`
+  * `%v` prints value in default format 
+  * `%+v` prints field names if the value is a struct
+    
+## if, else if and else
+```
+  if score > 3 {
+    fmt.Printf("good")
+  } else if score == 3 {
+    fmt.Printf("may be")
+  } else if score == 2 {
+    fmt.Printf("meh...")
+  } else {
+    fmt.Printf("no")
+  }
+```
+
+## Short IF; Simple statement; Short statement
+* IF statement
+  ```
+    num,err := strconv.Atoi("33")
+    if err != nil {
+      fmt.Println(err)
+    }
+  ```  
+* Short IF statement
+    ```
+    if num,err := strconv.Atoi("33"); err != nil {
+      fmt.Println(err)
+    }
+    ```
+
+## Shadowing
+* if you declare a variable with same name (ex: `n` below) inside a inner scope (ex: `if` statement) as of variable in outer scope(`n` after `main`), variable inside inner scope will be shadowing outer scope variable. For example, below program should print: 10, but instead it prints: 0
+```
+func main() {
+  var n int
+
+  if n, err := strconv.Atoi("10"); err != nil {
+    fmt.Printf("error: %s (n: %d)", err, n)
+    return
+  }
+
+  fmt.Println(n)
+}
+```
+* above shadowing problem can be solved by 
+```
+func main() {
+  var n int
+  var err error
+
+  if n, err = strconv.Atoi("10"); err != nil {
+    fmt.Printf("error: %s (n: %d)", err, n)
+    return
+  }
+
+  fmt.Println(n)
+}
+```
+
 
 # Packages
 
