@@ -150,3 +150,4 @@ func main() {
 * **RuneCountInString:** `len` function returns number of **bytes** in a string, instead of number of **characters**. For example, `len("hello")` returns 5 as the characters are english characters and each char occupy only 1byte. But it becomes obvious for non-english characters as some of those characters occupy more than one byte. So to find out the length of a string, use `utf8.RuneCountInString("hello")` instead of `len("hello")`
   
   
+
