@@ -13,8 +13,22 @@
   * `go build -o myscript`
 
 
+# Variables
 
-
+* Declaration and Initialization
+  * `var speed int`
+  * `var (
+       speed int = 10
+       heat float64 = 31.5
+       off bool = true
+       brand string = "famous"
+  )`
+* Zero values and Short declaration 
+  * ` booleans --> false`
+     `numerics --> 0`
+     `strings --> ""`
+     `pointers --> nil`
+  * `safe := true` [NOTE: can't be used at the package scope, works only at the block scope]  
 
 
 
