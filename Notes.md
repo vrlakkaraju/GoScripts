@@ -100,7 +100,7 @@
       fmt.Println(err)
     }
     ```
-
+    
 ## Shadowing
 * if you declare a variable with same name (ex: `n` below) inside a inner scope (ex: `if` statement) as of variable in outer scope(`n` after `main`), variable inside inner scope will be shadowing outer scope variable. For example, below program should print: 10, but instead it prints: 0
 ```
@@ -130,6 +130,36 @@ func main() {
 }
 ```
 
+## Switch statement
+* Similar to IF statement with a different syntax
+* case condition's type should match with switch condition's type
+* switch statements are executed from top to bottom
+```
+city := "paris"
+switch city {
+case "paris", "Lyon":
+  fmt.Println("France")
+case "London":
+  fmt.Println("UK")
+default:
+  fmt.Println("Unknown")
+}
+```
+* `fallthrough` statement executes next clause without checking for it's condition
+```
+i := 194
+
+switch {
+case i > 100:
+  fmt.Println("big")
+  fallthrough
+case i > 0:
+  fmt.Println("positive")
+  fallthrough
+default:
+  fmt.Println("number")
+} // prints `big positive number`
+```
 
 # Packages
 
