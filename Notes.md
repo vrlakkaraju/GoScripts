@@ -161,6 +161,56 @@ default:
 } // prints `big positive number`
 ```
 
+## FOR loop
+* executes a block of code as long as it's condition is true
+
+```
+for i := 1; i , 5; i++ {
+  sum += i
+}
+```
+OR
+```
+for i < 5 {
+  sum += i
+  i++
+}
+```
+* Below is an **infinite** loop
+```
+for {
+  sum += i
+  i++
+}
+```
+
+**break** statement: once i > 5 condition is true, execution breaks out of for loop
+```
+for {
+  if i > 5 {
+    break
+  }
+  sum += i
+  i++
+}
+```
+
+**continue** statememt: if i % 2 is non-zero, loop skips rest of the current step
+```
+for {
+  if i > 5 {
+    break
+  }
+  
+  if i % 2 != 0 {
+    continue
+  }
+  
+  sum += i
+  i++
+}
+```
+
 # Packages
 
 ## path 
