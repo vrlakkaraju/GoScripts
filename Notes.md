@@ -1,5 +1,5 @@
 # My Golang notes 
-**NOTE:** This work is reference from https://github.com/inancgumus/learngo 
+**NOTE:** These notes are a reference from https://github.com/inancgumus/learngo and full credits to Udemy course `Master and Deeply Understand Google's Go from Scratch with Illustrated In-Depth Tutorials & 1000+ Hands-On Exercises` by Inanc Gumus and Jose Portilla
 
 * To intialize a module 
   * `go mod mymodule`
