@@ -151,10 +151,10 @@ i := 194
 
 switch {
 case i > 100:
-  fmt.Println("big")
+  fmt.Printf("big ")
   fallthrough
 case i > 0:
-  fmt.Println("positive")
+  fmt.Printf("positive ")
   fallthrough
 default:
   fmt.Println("number")
