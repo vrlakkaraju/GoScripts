@@ -165,7 +165,7 @@ default:
 * executes a block of code as long as it's condition is true
 
 ```
-for i := 1; i , 5; i++ {
+for i := 1; i <= 5; i++ { // i := --> init statement, i <= 5 --> condition, i++ --> post statement
   sum += i
 }
 ```
