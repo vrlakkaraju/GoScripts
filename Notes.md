@@ -203,12 +203,42 @@ for {
   }
   
   if i % 2 != 0 {
+    i++
     continue
   }
   
   sum += i
   i++
 }
+```
+
+**Nested loop** to print multiplication table:
+```
+func main() {
+	fmt.Printf("%5s", "X") // Prints X after 4 spaces (right alinged)
+	for i := 0; i <= 5; i++ {  // To print 0 to 5 in the same line as X so it completes row header with X 0 1 2 3 4 5
+		fmt.Printf("%5d", i) 
+	}
+	fmt.Println()  // Print new line
+	for i := 0; i <= 5; i++ {   // To print column header 
+		fmt.Printf("%5d", i)
+		for j := 0; j <= 5; j++ { // To print multiplication value for each position in the same line as of current i value
+			fmt.Printf("%5d", i*j)
+		}
+		fmt.Println() // Go to next line after printing table for each i value
+	}
+}
+```
+
+OUTPUT for above code:
+```
+    X    0    1    2    3    4    5
+    0    0    0    0    0    0    0
+    1    0    1    2    3    4    5
+    2    0    2    4    6    8   10
+    3    0    3    6    9   12   15
+    4    0    4    8   12   16   20
+    5    0    5   10   15   20   25
 ```
 
 # Packages
@@ -224,6 +254,7 @@ for {
 ## os 
 * `os.Args` is []string (slice of strings) which stores command-line arguments
 * `go run main.go hello` will result in `os.Args[0] = /home/myscripts/main.go` (os.Args[0] is a path to the main.go)  and `os.Args[1] = "hello"`
+* command-line arguments stored in `os.Args` are always `string` type so convert them appropriately if you want to use it as another type. For example, running `myscript.go 100` will result in os.Args[1] value as "100", which is a string so if you want to use it as an interger, convert it into int from string via `strconv.Atoi(os.Args[1])`
 
 ## unicode/utf8
 
