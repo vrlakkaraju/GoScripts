@@ -241,6 +241,63 @@ OUTPUT for above code:
     5    0    5   10   15   20   25
 ```
 
+**range clause** to loop over slice of values
+```
+s := "lazy cat jumps over the fence again and again" 
+words := strings.Fields(s) // strings.Fields function returns []slice
+for i,v := range words {
+  fmt.Printf("#%-2d: %q", i+1, v)
+}
+
+```
+OUTPUT for above code:
+```
+#1 : "lazy"
+#2 : "cat"
+#3 : "jumps"
+#4 : "over"
+#5 : "the"
+#6 : "fence"
+#7 : "again"
+#8 : "and"
+#9 : "again"
+```
+
+## Arrays
+Collection of elements: **Indexable** and **Fixed** length.
+Array stores elements in contiguous memory cells.
+Array's type belongs to **compile-time**
+Length of an array is **part of it's type** ex: [2]string, [5]byte,[3]int etc
+
+Examples:
+
+* var age [2]byte // [2] is the length of the array; byte is element type of the array
+* create and initialize
+```
+var books = [4]string{
+  "one",
+  "two",
+  "three",
+  "four",
+}
+```
+* use ELLIPSIS operator to find the length of the array automatically. For below,length of the array is **[3]string**
+```
+[...]string{"hi", "hello", "howdy"}
+``` 
+
+**Multi-dimensional arrays**
+
+<img src="![image](https://user-images.githubusercontent.com/67871237/173247441-4e77ac53-fe4c-47e8-ae44-7fa149ea3ff7.png)" width="400" height="300">
+
+* declaring and initializing multi-dimensional array. Here **[2]** is the length of the array and **[3]int** is the element type of the array
+```
+[2][3] int {
+  {5,6,1},
+  {9,8,4},
+}
+```
+
 # Packages
 
 ## path 
