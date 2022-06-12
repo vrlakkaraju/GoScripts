@@ -288,7 +288,7 @@ var books = [4]string{
 
 **Multi-dimensional arrays**
 
-<img src="![image](https://user-images.githubusercontent.com/67871237/173247441-4e77ac53-fe4c-47e8-ae44-7fa149ea3ff7.png)" width="400" height="300">
+<img src="https://user-images.githubusercontent.com/67871237/173247734-06bbeeef-e504-4aea-a152-9e71c7340b6e.png" width="400" height="300">
 
 * declaring and initializing multi-dimensional array. Here **[2]** is the length of the array and **[3]int** is the element type of the array
 ```
