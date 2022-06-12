@@ -71,6 +71,7 @@
   * `%.2f` prints float64 values with 2 precision points ex: `54.50`
   * `%t` prints bool values ex: `true`
   * `%v` prints value in default format 
+  * `%#v` prints value in default format along with type
   * `%+v` prints field names if the value is a struct
     
 ## if, else if and else
@@ -290,13 +291,25 @@ var books = [4]string{
 
 <img src="https://user-images.githubusercontent.com/67871237/173247734-06bbeeef-e504-4aea-a152-9e71c7340b6e.png" width="400" height="300">
 
-* declaring and initializing multi-dimensional array. Here **[2]** is the length of the array and **[3]int** is the element type of the array
+* declaring and initializing multi-dimensional array. Here **[2]** is the length of the inner arrays and **[3]int** is the element type of each inner array
 ```
-[2][3] int {
+[2][3]int {
   {5,6,1},
   {9,8,4},
 }
 ```
+
+**keyed elements**
+* Keyed elements describe index position
+
+<img src="https://user-images.githubusercontent.com/67871237/173250354-a205d717-b702-4eed-a975-dbe2b1783563.png" width="300" height="300">
+
+**un-named and named types**
+
+<img width="1022" alt="image" src="https://user-images.githubusercontent.com/67871237/173251277-6fa8ec1b-441c-48bb-80cc-6dd43643e075.png">
+
+<img src="https://user-images.githubusercontent.com/67871237/173251404-db03527e-22d7-4106-a2f4-ab769aa3c0d2.png" width="400" height="300">
+
 
 # Packages
 
