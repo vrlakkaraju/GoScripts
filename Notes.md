@@ -311,6 +311,32 @@ var books = [4]string{
 <img src="https://user-images.githubusercontent.com/67871237/173251404-db03527e-22d7-4106-a2f4-ab769aa3c0d2.png" width="400" height="300">
 
 
+## Slices
+* Collection of elements: **Indexable** and **Dynamic** length
+* Unlike Arrays whose length belongs to compile-time, slices length belongs to **run-time** so it can grow or shrink at run-time
+* Slice length is **NOT** part of it's type
+* Use **append** function to add elements into a slice
+```
+nums := []int{1,2,3}
+nums = append(nums,5,6)
+fmt.Println(nums)
+```
+OUTPUT of above code is `[1 2 3 5 6]`
+
+* **Ellipsis** allows you to append a slice to another slice
+```
+ones := []int {1,2,3}
+tens := []int {10,20}
+
+ones = append(ones, tens...)
+fmt.Println(ones)
+```
+OUTPUT of above code is `[1 2 3 10 20]`
+
+*
+<img src="https://user-images.githubusercontent.com/67871237/173259807-a14ba3f7-b493-4686-8940-7d368373cef3.png" width="400" height="300">
+
+
 # Packages
 
 ## path 
